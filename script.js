@@ -652,6 +652,7 @@ if (john.calcBMI() > mark.calcBMI()) {
 /***
  * Loops and Iterations
  */
+/*
 
 for (var i = 0; i < 10; i++) {
     console.log(i);
@@ -680,7 +681,7 @@ while (i < john.length) {
     console.log(john[i]);
     i++;
 }
-*/
+
 
 // continue and break statements
 var john = ['John', 'Smith', 1990, 'designer', false, 'blue'];
@@ -698,3 +699,71 @@ for (var i = 0; i < john.length; i++) {
 for (var i = john.length - 1; i >= 0; i--) {
     console.log(john[i]);
 }
+*/
+
+/**
+ * Coding Challenge 5
+ */
+
+ var johnFamily = {
+     fullName: 'John Family',
+     bill: [124, 48, 268, 180, 42],
+     calcTip: function() {
+         var percentage;
+         this.tip = [];
+         this.finalBill = [];
+         for (var i = 0; i < this.bill.length; i++) {
+             if (this.bill[i] < 50) {
+                 percentage = .20;
+                 this.tip.push(this.bill[i] * percentage);
+                 this.finalBill.push(this.bill[i] + this.tip[i]);
+             } else if(this.bill[i] >= 50 && this.bill[i] <= 200) {
+                 percentage = .15;
+                 this.tip.push(this.bill[i] * percentage);
+                 this.finalBill.push(this.bill[i] + this.tip[i]);
+             } else {
+                 percentage = .10;
+                 this.tip.push(this.bill[i] * percentage);
+                 this.finalBill.push(this.bill[i] + this.tip[i]);
+             }
+         }
+     }
+ }
+ johnFamily.calcTip();
+ console.log(johnFamily);
+
+ var markFamily = {
+     fullName: 'Mark Family',
+     bill: [77, 375, 110, 45],
+     calcTip: function() {
+        var percentage;
+        this.tip = [];
+        this.finalBill = [];
+        for (var i = 0; i < this.bill.length; i++) {
+            if (this.bill[i] < 100) {
+                percentage = .20;
+                this.tip.push(this.bill[i] * percentage);
+                this.finalBill.push(this.bill[i] + this.tip[i]);
+            } else if(this.bill[i] >= 100 && this.bill[i] <= 300) {
+                percentage = .10;
+                this.tip.push(this.bill[i] * percentage);
+                this.finalBill.push(this.bill[i] + this.tip[i]);
+            } else {
+                percentage = .25;
+                this.tip.push(this.bill[i] * percentage);
+                this.finalBill.push(this.bill[i] + this.tip[i]);
+            }
+        }
+    }
+ }
+ markFamily.calcTip();
+ console.log(markFamily);
+
+ function averageTips(johnFamily)  {
+   var sum;
+    for (var i = 0; i < johnFamily.tip.length;  i++) {
+        sum += johnFamily.tip[i];
+    }
+    return sum;
+ }
+console.log(averageTips());
