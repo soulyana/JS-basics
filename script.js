@@ -558,6 +558,7 @@ console.log(tips, finalBill);
 /**
  * Objects and Methods
  */
+/*
 
 var john = {
     firstName: 'John',
@@ -573,6 +574,42 @@ var john = {
 
 john.calcAge();
 console.log(john);
+*/
 
+/***
+ * Coding Challenge 4
+ */
 
- 
+ var john = {
+     firstName: 'John',
+     lastName: 'Smith',
+     mass: 78, // kg,
+     height: 1.69, // meters
+     calcBMI: function() {
+         this.bmi = this.mass / (this.height * this.height)
+     }
+ };
+ john.calcBMI();
+ console.log(john);
+
+ var mark = {
+     firstName: 'Mark',
+     lastName: 'Smith',
+     mass: 78, // kg
+     height: 1.9, // meters
+     calcBMI: function() {
+         this.bmi = this.mass / (this.height * this.height)
+     }
+ }
+ mark.calcBMI();
+ console.log(mark);
+//  higherBMI = john.bmi > mark.bmi ? john.firstName + ' ' + john.lastName + ' has a higher BMI at ' + john.bmi : mark.firstName + ' ' + mark.lastName + ' has a higher BMI at ' + mark.bmi; 
+//  console.log(higherBMI);
+
+ if (john.bmi > mark.bmi) {
+     console.log(john.firstName + ' ' + john.lastName + ' has a higher BMI at ' + john.bmi); 
+ } else if (john.bmi < mark.bmi) {
+     console.log(mark.firstName + ' ' + mark.lastName + ' has a higher BMI at ' + mark.bmi);
+ } else {
+     console.log(john.firstName + ' and ' + mark.firstName + ' have the same BMI at ' + john.bmi);
+ }
