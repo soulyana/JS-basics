@@ -527,7 +527,7 @@ console.log(tips, finalBill);
 /**
  * Objects and properties
  */
-
+/*
  // Object literal
  var john = {
      firstName: 'John',
@@ -553,3 +553,26 @@ console.log(tips, finalBill);
  jane.birthYear = 1969;
  jane['lastName'] = 'Smith';
  console.log(jane);
+**/
+
+/**
+ * Objects and Methods
+ */
+
+var john = {
+    firstName: 'John',
+    lastName: 'Smith',
+    birthYear: 1992,
+    family: ['Jane', 'Mark', 'Bob', 'Emily'],
+    job: 'teacher',
+    isMarried: false,
+    calcAge: function(){
+        this.age = 2019 - this.birthYear;
+    }
+};
+
+john.calcAge();
+console.log(john);
+
+
+ 
