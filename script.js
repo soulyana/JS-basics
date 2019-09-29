@@ -579,6 +579,7 @@ console.log(john);
 /***
  * Coding Challenge 4
  */
+/*
 
  var john = {
      firstName: 'John',
@@ -613,3 +614,35 @@ console.log(john);
  } else {
      console.log(john.firstName + ' and ' + mark.firstName + ' have the same BMI at ' + john.bmi);
  }
+ */
+
+ /**
+  * Coding Challenge 4: instructor solution
+  */
+
+  var john = {
+      fullName: 'John Smith',
+      mass: 92, 
+      height: 1.95,
+      calcBMI: function() {
+        this.bmi = this.mass / (this.height * this.height);
+        return this.bmi;
+    }
+  }
+  var mark = {
+    fullName: 'Mark Smith',
+    mass: 76, 
+    height: 1.69,
+    calcBMI: function() {
+      this.bmi = this.mass / (this.height * this.height);
+      return this.bmi;
+  }
+}
+ 
+if (john.calcBMI() > mark.calcBMI()) {
+    console.log(john.fullName + ' has a higher BMI at ' + john.bmi); 
+} else if (mark.bmi > john.bmi) {
+    console.log(mark.fullName + ' has a higher BMI at ' + mark.bmi);
+} else {
+    console.log('They have the same BMI!');
+}
