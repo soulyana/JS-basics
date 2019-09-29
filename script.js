@@ -616,33 +616,85 @@ console.log(john);
  }
  */
 
- /**
-  * Coding Challenge 4: instructor solution
-  */
+/**
+ * Coding Challenge 4: instructor solution
+ */
+/*
 
-  var john = {
-      fullName: 'John Smith',
-      mass: 92, 
-      height: 1.95,
-      calcBMI: function() {
-        this.bmi = this.mass / (this.height * this.height);
-        return this.bmi;
-    }
-  }
-  var mark = {
-    fullName: 'Mark Smith',
-    mass: 76, 
-    height: 1.69,
-    calcBMI: function() {
-      this.bmi = this.mass / (this.height * this.height);
-      return this.bmi;
-  }
+ var john = {
+     fullName: 'John Smith',
+     mass: 92, 
+     height: 1.95,
+     calcBMI: function() {
+       this.bmi = this.mass / (this.height * this.height);
+       return this.bmi;
+   }
+ }
+ var mark = {
+   fullName: 'Mark Smith',
+   mass: 76, 
+   height: 1.69,
+   calcBMI: function() {
+     this.bmi = this.mass / (this.height * this.height);
+     return this.bmi;
+ }
 }
  
 if (john.calcBMI() > mark.calcBMI()) {
-    console.log(john.fullName + ' has a higher BMI at ' + john.bmi); 
+   console.log(john.fullName + ' has a higher BMI at ' + john.bmi); 
 } else if (mark.bmi > john.bmi) {
-    console.log(mark.fullName + ' has a higher BMI at ' + mark.bmi);
+   console.log(mark.fullName + ' has a higher BMI at ' + mark.bmi);
 } else {
-    console.log('They have the same BMI!');
+   console.log('They have the same BMI!');
+}
+*/
+
+/***
+ * Loops and Iterations
+ */
+
+for (var i = 0; i < 10; i++) {
+    console.log(i);
+}
+
+// i = 0, 0 < 10 true, log i to console, i++
+// i = 1, 1 < 10 true, log i to console, i++
+// i = 2, 2 < 10 true, log i to console, i++
+// ... 
+// i = 9, 9 < 10 true, log i to console, i++
+// i = 10, 10 < 10 false, exit loop
+/*
+for (var i = 1; i <= 20; i += 2) {
+    console.log(i);
+}
+ 
+var john = ['John', 'Smith', 1990, 'designer', false, 'blue'];
+console.log(john);
+for (var i = 0; i < john.length; i++) {
+    console.log(john[i]);
+}
+
+// while loop
+var i = 0;
+while (i < john.length) {
+    console.log(john[i]);
+    i++;
+}
+*/
+
+// continue and break statements
+var john = ['John', 'Smith', 1990, 'designer', false, 'blue'];
+for (var i = 0; i < john.length; i++) {
+    if (typeof john[i] !== 'string') continue;
+    console.log(john[i]);
+}
+
+for (var i = 0; i < john.length; i++) {
+    if (typeof john[i] !== 'string') break;
+    console.log(john[i]);
+}
+
+// Looping backwards
+for (var i = john.length - 1; i >= 0; i--) {
+    console.log(john[i]);
 }
