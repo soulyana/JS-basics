@@ -772,6 +772,7 @@ console.log(averageTips());
 /**
  * Coding Challenge 5 Instructor solution:
  */
+/*
 
 var john = {
     fullName: 'John Smith',
@@ -853,3 +854,10 @@ if (john.average > mark.average) {
 } else {
     console.log('They have the same average tip!');
 }
+*/
+
+/**
+ * Javascript versions: ES6/ES2015
+ *  transpiling & polyfilling
+ */
+
